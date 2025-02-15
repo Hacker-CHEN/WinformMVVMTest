@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.35425.106
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinformMVVM", "WinformMVVM\WinformMVVM.csproj", "{4306569B-5686-4E4E-B2A3-F895F39373D1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UW.Common", "UW.Common\UW.Common.csproj", "{4C7EB76E-B5B5-40F3-A746-DFA7D1650C3B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4306569B-5686-4E4E-B2A3-F895F39373D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4306569B-5686-4E4E-B2A3-F895F39373D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4306569B-5686-4E4E-B2A3-F895F39373D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4306569B-5686-4E4E-B2A3-F895F39373D1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4C7EB76E-B5B5-40F3-A746-DFA7D1650C3B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C7EB76E-B5B5-40F3-A746-DFA7D1650C3B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C7EB76E-B5B5-40F3-A746-DFA7D1650C3B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C7EB76E-B5B5-40F3-A746-DFA7D1650C3B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2C02901A-47BF-4F12-8C85-1BB1AA570E90}
+	EndGlobalSection
+EndGlobal
