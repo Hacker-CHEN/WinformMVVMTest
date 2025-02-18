@@ -12,7 +12,7 @@ namespace WinformMVVM.Services.Users
     {
         public UserModel GetUserByUsername(string userName)
         {
-            return UserDAL.Query_UserByUserName(userName);
+            return new UserModel();
         }
 
         public bool ValidateUser(string username,string password)

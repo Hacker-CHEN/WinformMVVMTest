@@ -32,7 +32,7 @@ namespace WinformMVVM.Views
         {
             try
             {
-                if (txtUserName.Text == "" || txtPassword.Text == "")
+                if (_loginViewModel.Username == "" || _loginViewModel.Password == "")
                 {
                     MessageBox.Show("Please enter your username and password");
                     return;

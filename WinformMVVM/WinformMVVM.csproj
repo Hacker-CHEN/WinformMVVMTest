@@ -115,11 +115,5 @@
   <ItemGroup>
     <Folder Include="IoC\" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\UW.Common\UW.Common.csproj">
-      <Project>{4c7eb76e-b5b5-40f3-a746-dfa7d1650c3b}</Project>
-      <Name>UW.Common</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
