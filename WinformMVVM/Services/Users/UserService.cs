@@ -3,26 +3,30 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using WinformCore.Client;
+using WinformCore.Models.Users;
 using WinformMVVM.DAL;
-using WinformMVVM.Models.Users;
 
 namespace WinformMVVM.Services.Users
 {
     public class UserService : IUserService
     {
-        public UserModel GetUserByUsername(string userName)
+        private readonly ISqlSugarClientFactory _clientFactory;
+
+        public UserService(ISqlSugarClientFactory clientFactory)
         {
-            return new UserModel();
+            _clientFactory = clientFactory;
         }
 
-        public bool ValidateUser(string username,string password)
+        public List<UserModel> GetData()
         {
-            UserModel userModel = GetUserByUsername(username);
-            if (userModel != null&& userModel.Password==password)
-            {
-                return true;
-            }
-            return false;
+            var db = _clientFactory.CreateClient();
+            return db.Queryable<UserModel>().ToList();
+        }
+
+        public void Add(UserModel userModel)
+        {
+            throw new NotImplementedException();
         }
     }
 }

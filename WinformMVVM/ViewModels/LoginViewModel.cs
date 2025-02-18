@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Input;
+using WinformCore.Models.Users;
 using WinformMVVM.Commands;
 using WinformMVVM.Services.Users;
 
@@ -16,55 +17,30 @@ namespace WinformMVVM.ViewModels
     {
         public event PropertyChangedEventHandler PropertyChanged;
         private UserService _userService;
+        private List<UserModel> _userData;
+
         public ICommand LoginCommand { get; }
-
-
-        private string _username;
-        public string Username
-        {
-            get { return _username; }
-            set
-            {
-                if (_username != value)
-                {
-                    _username = value;
-                    OnPropertyChanged();
-                }
-            }
-        }
-
-
-        private string _password;
-        public string Password
-        {
-            get { return _password; }
-            set
-            {
-                if (_password != value)
-                {
-                    _password = value;
-                    OnPropertyChanged();
-                }
-            }
-        }
-
 
         public LoginViewModel(UserService userService)
         {
             _userService = userService;
-            LoginCommand = new RelayCommand(ExecuteLogin);
+            LoginCommand = new RelayCommand(LoadData);
 
         }
 
-        private void ExecuteLogin()
+        public List<UserModel> UserData
         {
-            bool isValid = _userService.ValidateUser(Username, Password);
-            if (isValid)
+            get => _userData;
+            set
             {
-                MessageBox.Show("Login successful!");
-                return;
+                _userData = value;
+                OnPropertyChanged(nameof(UserData));
             }
-            MessageBox.Show("Login failed. Invalid username or password.");
+        }
+
+        private void LoadData()
+        {
+            UserData = _userService.GetData();
         }
 
 
